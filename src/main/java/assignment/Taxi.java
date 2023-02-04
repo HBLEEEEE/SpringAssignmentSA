@@ -99,13 +99,4 @@ public class Taxi extends Transportation {
         }
         this.speed += changed_speed;
     }
-
-
-
-
-
-
-
-
-
 }

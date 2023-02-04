@@ -1,5 +1,7 @@
 package assignment;
 
+
+
 public class Transportation {
 
     String number;

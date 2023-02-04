@@ -1,14 +1,24 @@
 package assignment;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Bus extends Transportation{
 
     int BusFee = 1000;
 
+    static Set buslist = new HashSet();
+
 
     public Bus(String number){
-        super.number = number;
-        max_people = 30;
-        System.out.println(number+"번 버스객체 만들어짐!");
+        if (buslist.contains(number)){
+            System.out.println("이미 있는 번호 입니다.");
+        }else {
+            super.number = number;
+            max_people = 30;
+            buslist.add(number);
+            System.out.println(number+"번 버스객체 만들어짐!");
+        }
     }
 
     public void bus_Off(){
